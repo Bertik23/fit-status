@@ -1,0 +1,18 @@
+
+   table {
+       color: #000;
+      margin: 0 auto;
+      font-size: large;
+      border: 1px solid black;
+    }
+    th {
+      font-weight: bold;
+  }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    td.Operational {
+        background-color: #50A030
+    }
