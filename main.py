@@ -3,6 +3,7 @@ import requests
 import json
 from datetime import datetime
 import os
+os.system(f"git pull")
 
 html_doc = requests.get("https://fitcvut.statuspage.io").text
 
