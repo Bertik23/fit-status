@@ -35,3 +35,4 @@ with open("display.html", "w") as f_output:
 
 os.system("git add data.json display.html")
 os.system(f"git -c commit.gpgsign=false commit -m 'Run {datetime.now().isoformat()}'")
+os.system(f"git push")
