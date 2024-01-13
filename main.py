@@ -12,6 +12,9 @@ divs = soup.find_all('div', {'class': 'component-inner-container'})
 
 d = {system: status for system, status in map(lambda x: (x.find("span", {"class": "name"}).string.strip(),x.find("span", {"class": "component-status"}).string.strip()) ,divs)}
 
+if d["KOSapi"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/kVr7zi8yUp?status=up&msg=OK&ping=")
+
 with open("display.html") as f:
     html_display = BeautifulSoup(f.read(), "html.parser")
 
