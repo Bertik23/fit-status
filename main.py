@@ -14,6 +14,22 @@ d = {system: status for system, status in map(lambda x: (x.find("span", {"class"
 
 if d["KOSapi"] == "Operational":
     requests.get("https://status.stepech.com/api/push/kVr7zi8yUp?status=up&msg=OK&ping=")
+if d["Grades"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/VwDihrJ87M?status=up&msg=OK&ping=")
+if d["OAuth"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/TGSmNYxUQz?status=up&msg=OK&ping=")
+if d["PrintFIT"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/uDZNKcNcXs?status=up&msg=OK&ping=")
+if d["Courses"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/juLzSsJ0HM?status=up&msg=OK&ping=")
+if d["USERapi"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/Dd77wfsFAp?status=up&msg=OK&ping=")
+if d["ProjectsFIT"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/tgALXYoAX6?status=up&msg=OK&ping=")
+if d["GitLab"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/kzl3sgRBhX?status=up&msg=OK&ping=")
+if d["WebFIT"] == "Operational":
+    requests.get("https://status.stepech.com/api/push/QgyWvDciqi?status=up&msg=OK&ping=")
 
 with open("display.html") as f:
     html_display = BeautifulSoup(f.read(), "html.parser")
