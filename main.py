@@ -12,6 +12,8 @@ divs = soup.find_all('div', {'class': 'component-inner-container'})
 
 d = {system: status for system, status in map(lambda x: (x.find("span", {"class": "name"}).string.strip(),x.find("span", {"class": "component-status"}).string.strip()) ,divs)}
 
+requests.get("https://status.stepech.com/api/push/5otNVgAJbb?status=up&msg=OK&ping=")
+
 if d["KOSapi"] == "Operational":
     requests.get("https://status.stepech.com/api/push/kVr7zi8yUp?status=up&msg=OK&ping=")
 if d["Grades"] == "Operational":
