@@ -56,7 +56,7 @@ print(systems)
 dashes = "---"
 
 html_display.find("table").replace_with("".join(["<table>", "<th>Timestamp</th>", "".join(f"<th>{sys}</th>" for sys in systems),
-    "".join(f"<tr><td>{stamp}</td>{''.join(f'<td class={t[sys]}>{t.get(sys, dashes)}</td>' for sys in systems)}</tr>" for (stamp, t) in curr.items()),
+    "".join(f"<tr><td>{stamp}</td>{''.join(f'<td class={t.get(sys, dashes)}>{t.get(sys, dashes)}</td>' for sys in systems)}</tr>" for (stamp, t) in curr.items()),
                                        "</table>"] ))
 
 with open("display.html", "w") as f_output:
